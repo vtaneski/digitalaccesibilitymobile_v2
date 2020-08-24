@@ -31,9 +31,11 @@ $(document).ready(function () {
   loadFirstSound();
 
   // basic play and stop functions
-  function playSound(sound) {
+  function playSound(sound, id) {
+    id++;
     let promise = sound.play();
-
+    $("#play" + id).hide();
+    $("#pause" + id).show();
     if (promise !== undefined) {
       promise
         .then((_) => {
@@ -46,29 +48,34 @@ $(document).ready(function () {
           // Show a "Play" button so that user can start playback.
           console.log(error);
           soundPlaying = false;
+          $("#play" + id).show();
+          $("#pause" + id).hide();
           console.log("Sound playing: " + soundPlaying);
         });
     }
   }
 
-  function stopSound(sound) {
+  function stopSound(sound, id) {
+    id++;
     sound.pause();
+    $("#play" + id).show();
+    $("#pause" + id).hide();
     //sound.currentTime = 0;
     soundPlaying = false;
     console.log("Sound playing: " + soundPlaying);
   }
 
   function loadFirstSound() {
-    playSound(soundsArray[currentSoundID]);
+    playSound(soundsArray[currentSoundID], currentSoundID);
     console.log(soundTxtArray[currentSoundID]);
   }
 
   $("#mainDiv").on("tap", function () {
     let sound = soundsArray[currentSoundID];
     if (soundPlaying) {
-      stopSound(sound);
+      stopSound(sound, currentSoundID);
     } else {
-      playSound(sound);
+      playSound(sound, currentSoundID);
     }
   });
 
@@ -83,7 +90,7 @@ $(document).ready(function () {
     stopSound(soundsArray[currentSoundID]);
     if (currentSoundID < 6) currentSoundID++;
     if (currentSoundID < 7) {
-      playSound(soundsArray[currentSoundID]);
+      playSound(soundsArray[currentSoundID], currentSoundID);
       console.log(soundTxtArray[currentSoundID]);
 
       // show the new tile
@@ -108,7 +115,7 @@ $(document).ready(function () {
     stopSound(soundsArray[currentSoundID]);
     if (currentSoundID > 0) currentSoundID--;
     if (currentSoundID >= 0) {
-      playSound(soundsArray[currentSoundID]);
+      playSound(soundsArray[currentSoundID], currentSoundID);
       console.log(soundTxtArray[currentSoundID]);
 
       // show the new tile
