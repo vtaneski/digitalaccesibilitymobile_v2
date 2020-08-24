@@ -66,13 +66,15 @@ $(document).ready(function () {
     playSound(soundsArray[currentSoundID], currentSoundID);
   }
 
-  $("#mainDiv").on("tap", function () {
+  $("#mainDiv").on("tap", function (event) {
     let sound = soundsArray[currentSoundID];
     if (soundPlaying) {
       stopSound(sound, currentSoundID);
     } else {
       playSound(sound, currentSoundID);
     }
+
+    event.preventDefault();
   });
 
   $("#mainDiv").on("swipeleft", function () {
