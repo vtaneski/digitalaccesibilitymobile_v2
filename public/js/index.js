@@ -41,7 +41,6 @@ $(document).ready(function () {
         .then((_) => {
           // Autoplay started!
           soundPlaying = true;
-          console.log("Sound playing: " + soundPlaying);
         })
         .catch((error) => {
           // Autoplay was prevented.
@@ -50,7 +49,6 @@ $(document).ready(function () {
           soundPlaying = false;
           $("#play" + id).show();
           $("#pause" + id).hide();
-          console.log("Sound playing: " + soundPlaying);
         });
     }
   }
@@ -62,12 +60,10 @@ $(document).ready(function () {
     $("#pause" + id).hide();
     //sound.currentTime = 0;
     soundPlaying = false;
-    console.log("Sound playing: " + soundPlaying);
   }
 
   function loadFirstSound() {
     playSound(soundsArray[currentSoundID], currentSoundID);
-    console.log(soundTxtArray[currentSoundID]);
   }
 
   $("#mainDiv").on("tap", function () {
@@ -91,7 +87,6 @@ $(document).ready(function () {
     if (currentSoundID < 6) currentSoundID++;
     if (currentSoundID < 7) {
       playSound(soundsArray[currentSoundID], currentSoundID);
-      console.log(soundTxtArray[currentSoundID]);
 
       // show the new tile
       const showID = currentSoundID + 1;
@@ -99,8 +94,6 @@ $(document).ready(function () {
 
       // set the new indicator at the bottom
       $("#li" + showID).addClass("active");
-
-      console.log("HideID: " + hideID + " ShowID: " + showID);
     }
   });
 
@@ -116,7 +109,6 @@ $(document).ready(function () {
     if (currentSoundID > 0) currentSoundID--;
     if (currentSoundID >= 0) {
       playSound(soundsArray[currentSoundID], currentSoundID);
-      console.log(soundTxtArray[currentSoundID]);
 
       // show the new tile
       const showID = currentSoundID + 1;
