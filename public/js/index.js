@@ -6,6 +6,13 @@ $(document).ready(function () {
   const AUDIO5 = "audio/5_Darko Golija, Lega sesanja.mp3";
   const AUDIO6 = "audio/6_Slavko Tihec, Akvamobil.mp3";
   const AUDIO7 = "audio/7_Zdenko Huzjan, Vzglavnik zemlje in neba.mp3";
+  const AUDIO8 = "audio/1_Živko Marušič, Sanje.mp3";
+  const AUDIO9 = "audio/2_Petra Varl, Plavalka.mp3";
+  const AUDIO10 = "audio/3_Ivan Grohar, Kapelica.mp3";
+  const AUDIO11 = "audio/4_Avgusta Šantel ml., Cvetje v vazi.mp3";
+  const AUDIO12 = "audio/5_Darko Golija, Lega sesanja.mp3";
+  const AUDIO13 = "audio/6_Slavko Tihec, Akvamobil.mp3";
+  const AUDIO14 = "audio/7_Zdenko Huzjan, Vzglavnik zemlje in neba.mp3";
 
   const sound1 = new Audio(AUDIO1);
   const sound2 = new Audio(AUDIO2);
@@ -14,6 +21,13 @@ $(document).ready(function () {
   const sound5 = new Audio(AUDIO5);
   const sound6 = new Audio(AUDIO6);
   const sound7 = new Audio(AUDIO7);
+  const sound8 = new Audio(AUDIO8);
+  const sound9 = new Audio(AUDIO9);
+  const sound10 = new Audio(AUDIO10);
+  const sound11 = new Audio(AUDIO11);
+  const sound12 = new Audio(AUDIO12);
+  const sound13 = new Audio(AUDIO13);
+  const sound14 = new Audio(AUDIO14);
 
   const soundTxtArray = [
     AUDIO1,
@@ -23,8 +37,29 @@ $(document).ready(function () {
     AUDIO5,
     AUDIO6,
     AUDIO7,
+    AUDIO8,
+    AUDIO9,
+    AUDIO10,
+    AUDIO11,
+    AUDIO12,
+    AUDIO13,
+    AUDIO14
   ];
-  const soundsArray = [sound1, sound2, sound3, sound4, sound5, sound6, sound7];
+  const soundsArray = [
+    sound1,
+    sound2,
+    sound3,
+    sound4,
+    sound5,
+    sound6,
+    sound7,
+    sound8,
+    sound9,
+    sound10,
+    sound11,
+    sound12,
+    sound13,
+    sound14];
   let currentSoundID = 0;
   let soundPlaying = false;
 
@@ -86,8 +121,8 @@ $(document).ready(function () {
     $("#li" + hideID).removeClass("active");
 
     stopSound(soundsArray[currentSoundID]);
-    if (currentSoundID < 6) currentSoundID++;
-    if (currentSoundID < 7) {
+    if (currentSoundID < soundsArray.length - 1) currentSoundID++;
+    if (currentSoundID < soundsArray.length) {
       playSound(soundsArray[currentSoundID], currentSoundID);
 
       // show the new tile
