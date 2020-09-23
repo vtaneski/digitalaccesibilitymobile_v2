@@ -30,20 +30,25 @@ $(document).ready(function () {
   const sound14 = new Audio(AUDIO14);
 
   const soundTxtArray = [
-    AUDIO1,
-    AUDIO2,
-    AUDIO3,
-    AUDIO4,
-    AUDIO5,
-    AUDIO6,
-    AUDIO7,
-    AUDIO8,
-    AUDIO9,
-    AUDIO10,
-    AUDIO11,
-    AUDIO12,
-    AUDIO13,
-    AUDIO14
+    "Živko Marušič - Sanje",
+    "Petra Varl - Plavalka",
+    "Nataša Prosenc Stearns - Obala",
+    "Elsa Oeltjen Kasimir - Čoln",
+    "Ivan Grohar - Kapelica", 
+    "Avgusta Šantel ml. - Cvetje v vazi", 
+    "Ivan Kos - Deklica z oranžo", 
+    "Tone Kralj - Moja žena",
+    "Jakob Savinšek - Portret H.",
+    "Rudolf Kotnik - Razkosano polje",
+    "Metka Krašovec - Rastoča voda",
+    "Slavko Tihec - Akvamobil / Kinetični objekt: Koncentrumi III",
+    "Dragica Čadež - iz cikla Različice gubanja",
+    "Miran Mišo Hochstätter - Nature morte, No. 2",
+    "Janko Andrej Jelnikar - Brezglavi / Človek brez glave",
+    "Metka Kavčič - Prt",
+    "Zdenko Huzjan - Vzglavnik zemlje in neba",
+    "Sandi Červek - Slika",
+    "Darko Golija - Lega sesanja"
   ];
   const soundsArray = [
     sound1,
@@ -131,6 +136,8 @@ $(document).ready(function () {
 
       // set the new indicator at the bottom
       $("#li" + showID).addClass("active");
+
+      $("#text").text(soundTxtArray[currentSoundID]);
     }
   });
 
@@ -153,6 +160,8 @@ $(document).ready(function () {
 
       // set the new indicator at the bottom
       $("#li" + showID).addClass("active");
+
+      $("#text").text(soundTxtArray[currentSoundID]);
     }
   });
 });
