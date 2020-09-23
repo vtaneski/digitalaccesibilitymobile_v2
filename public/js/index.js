@@ -91,6 +91,8 @@ $(document).ready(function () {
     let promise = sound.play();
     $("#play" + id).hide();
     $("#pause" + id).show();
+    $("#text" + id).text(soundTxtArray[id-1]);
+
     if (promise !== undefined) {
       promise
         .then((_) => {
@@ -152,7 +154,7 @@ $(document).ready(function () {
       // set the new indicator at the bottom
       $("#li" + showID).addClass("active");
 
-      $("#text").text(soundTxtArray[currentSoundID]);
+      $("#text" + showID).text(soundTxtArray[currentSoundID]);
     }
   });
 
@@ -176,7 +178,7 @@ $(document).ready(function () {
       // set the new indicator at the bottom
       $("#li" + showID).addClass("active");
 
-      $("#text").text(soundTxtArray[currentSoundID]);
+      $("#text" + showID).text(soundTxtArray[currentSoundID]);
     }
   });
 });
