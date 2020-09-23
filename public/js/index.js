@@ -1,18 +1,23 @@
 $(document).ready(function () {
-  const AUDIO1 = "audio/1_Živko Marušič, Sanje.mp3";
-  const AUDIO2 = "audio/2_Petra Varl, Plavalka.mp3";
-  const AUDIO3 = "audio/3_Ivan Grohar, Kapelica.mp3";
-  const AUDIO4 = "audio/4_Avgusta Šantel ml., Cvetje v vazi.mp3";
-  const AUDIO5 = "audio/5_Darko Golija, Lega sesanja.mp3";
-  const AUDIO6 = "audio/6_Slavko Tihec, Akvamobil.mp3";
-  const AUDIO7 = "audio/7_Zdenko Huzjan, Vzglavnik zemlje in neba.mp3";
-  const AUDIO8 = "audio/1_Živko Marušič, Sanje.mp3";
-  const AUDIO9 = "audio/2_Petra Varl, Plavalka.mp3";
-  const AUDIO10 = "audio/3_Ivan Grohar, Kapelica.mp3";
-  const AUDIO11 = "audio/4_Avgusta Šantel ml., Cvetje v vazi.mp3";
-  const AUDIO12 = "audio/5_Darko Golija, Lega sesanja.mp3";
-  const AUDIO13 = "audio/6_Slavko Tihec, Akvamobil.mp3";
-  const AUDIO14 = "audio/7_Zdenko Huzjan, Vzglavnik zemlje in neba.mp3";
+  const AUDIO1 = "audio/(1) Živko Marušič - Sanje.mp3";
+  const AUDIO2 = "audio/(2) Petra Varl - Plavalka.mp3";
+  const AUDIO3 = "audio/(3) Nataša Prosenc Stearns - Obala.mp3";
+  const AUDIO4 = "audio/(4) Elsa Oeltjen Kasimir - Čoln.mp3";
+  const AUDIO5 = "audio/(5) Ivan Grohar - Kapelica.mp3";
+  const AUDIO6 = "audio/(6) Avgusta Šantel ml. - Cvetje v vazi.mp3";
+  const AUDIO7 = "audio/(7) Ivan Kos - Deklica z oranžo.mp3";
+  const AUDIO8 = "audio/(8) Tone Kralj - Moja žena.mp3";
+  const AUDIO9 = "audio/(9) Jakob Savinšek - Portret H..mp3";
+  const AUDIO10 = "audio/(10) Rudolf Kotnik - Razkosano polje.mp3";
+  const AUDIO11 = "audio/(11) Metka Krašovec - Rastoča voda.mp3";
+  const AUDIO12 = "audio/(12) Slavko Tihec - Akvamobil.mp3";
+  const AUDIO13 = "audio/(13) Dragica Čadež - Različice gubanja.mp3";
+  const AUDIO14 = "audio/(14) Miran Mišo Hochstätter - Nature morte No. 2.mp3";
+  const AUDIO15 = "audio/(15) Janko Andrej Jelnikar - Človek brez glave.mp3";
+  const AUDIO16 = "audio/(16) Metka Kavčič - Prt.mp3";
+  const AUDIO17 = "audio/(17) Zdenko Huzjan - Vzglavnik zemlje in neba.mp3";
+  const AUDIO18 = "audio/(18) Sandi Červek - Slika.mp3";
+  const AUDIO19 = "audio/(19) Darko Golija - Lega sesanja.mp3";
 
   const sound1 = new Audio(AUDIO1);
   const sound2 = new Audio(AUDIO2);
@@ -28,6 +33,11 @@ $(document).ready(function () {
   const sound12 = new Audio(AUDIO12);
   const sound13 = new Audio(AUDIO13);
   const sound14 = new Audio(AUDIO14);
+  const sound15 = new Audio(AUDIO15);
+  const sound16 = new Audio(AUDIO16);
+  const sound17 = new Audio(AUDIO17);
+  const sound18 = new Audio(AUDIO18);
+  const sound19 = new Audio(AUDIO19);
 
   const soundTxtArray = [
     "Živko Marušič - Sanje",
@@ -64,7 +74,12 @@ $(document).ready(function () {
     sound11,
     sound12,
     sound13,
-    sound14];
+    sound14,
+    sound15,
+    sound16,
+    sound17,
+    sound18,
+    sound19];
   let currentSoundID = 0;
   let soundPlaying = false;
 
