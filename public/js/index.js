@@ -40,7 +40,7 @@ $(document).ready(function () {
   const sound19 = new Audio(AUDIO19);
 
   const soundTxtArray = [
-    "Živko Marušič - Sanje",
+    `Živko Marušič - SANJE`,
     "Petra Varl - Plavalka",
     "Nataša Prosenc Stearns - Obala",
     "Elsa Oeltjen Kasimir - Čoln",
@@ -91,7 +91,7 @@ $(document).ready(function () {
     let promise = sound.play();
     $("#play" + id).hide();
     $("#pause" + id).show();
-    $("#text" + id).text(soundTxtArray[id-1]);
+    //$("#text" + id).text(soundTxtArray[id-1]);
 
     if (promise !== undefined) {
       promise
@@ -154,7 +154,7 @@ $(document).ready(function () {
       // set the new indicator at the bottom
       $("#li" + showID).addClass("active");
 
-      $("#text" + showID).text(soundTxtArray[currentSoundID]);
+      //$("#text" + showID).text(soundTxtArray[currentSoundID]);
     }
   });
 
@@ -178,7 +178,7 @@ $(document).ready(function () {
       // set the new indicator at the bottom
       $("#li" + showID).addClass("active");
 
-      $("#text" + showID).text(soundTxtArray[currentSoundID]);
+      //$("#text" + showID).text(soundTxtArray[currentSoundID]);
     }
   });
 });
